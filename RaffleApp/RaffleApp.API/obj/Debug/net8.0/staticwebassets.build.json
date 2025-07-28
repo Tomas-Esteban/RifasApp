@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "qa8ZGlvUAJXiEqfIJkY/FdyRLLQA7dM6QPVvub6BE5s=",
+  "Source": "RaffleApp.API",
+  "BasePath": "_content/RaffleApp.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

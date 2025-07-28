@@ -1,0 +1,14 @@
+/Users/admin/RaffleApp/RaffleApp.Core/bin/Debug/net8.0/RaffleApp.Core.deps.json
+/Users/admin/RaffleApp/RaffleApp.Core/bin/Debug/net8.0/RaffleApp.Core.runtimeconfig.json
+/Users/admin/RaffleApp/RaffleApp.Core/bin/Debug/net8.0/RaffleApp.Core.dll
+/Users/admin/RaffleApp/RaffleApp.Core/bin/Debug/net8.0/RaffleApp.Core.pdb
+/Users/admin/RaffleApp/RaffleApp.Core/obj/Debug/net8.0/RaffleApp.Core.csproj.AssemblyReference.cache
+/Users/admin/RaffleApp/RaffleApp.Core/obj/Debug/net8.0/RaffleApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/admin/RaffleApp/RaffleApp.Core/obj/Debug/net8.0/RaffleApp.Core.AssemblyInfoInputs.cache
+/Users/admin/RaffleApp/RaffleApp.Core/obj/Debug/net8.0/RaffleApp.Core.AssemblyInfo.cs
+/Users/admin/RaffleApp/RaffleApp.Core/obj/Debug/net8.0/RaffleApp.Core.csproj.CoreCompileInputs.cache
+/Users/admin/RaffleApp/RaffleApp.Core/obj/Debug/net8.0/RaffleApp.Core.dll
+/Users/admin/RaffleApp/RaffleApp.Core/obj/Debug/net8.0/refint/RaffleApp.Core.dll
+/Users/admin/RaffleApp/RaffleApp.Core/obj/Debug/net8.0/RaffleApp.Core.pdb
+/Users/admin/RaffleApp/RaffleApp.Core/obj/Debug/net8.0/RaffleApp.Core.genruntimeconfig.cache
+/Users/admin/RaffleApp/RaffleApp.Core/obj/Debug/net8.0/ref/RaffleApp.Core.dll
