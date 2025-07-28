@@ -1,0 +1,294 @@
+/* CSS puro para la rifa */
+
+.raffle-container {
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.raffle-content {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h1, h2, h3 {
+  color: #1f2937;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.main-title {
+  font-size: 1.875rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+}
+
+/* GRILLA DE NÚMEROS - CRÍTICO */
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 8px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.number-item {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 2px solid;
+  box-sizing: border-box;
+}
+
+/* Estados de números */
+.number-item-libre {
+  background-color: white;
+  color: #1f2937;
+  border-color: #d1d5db;
+}
+
+.number-item-libre:hover {
+  border-color: #60a5fa;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.number-item-reservado {
+  background-color: #fbbf24;
+  color: #92400e;
+  border-color: #f59e0b;
+  cursor: not-allowed;
+}
+
+.number-item-ocupado {
+  background-color: #ef4444;
+  color: white;
+  border-color: #dc2626;
+  cursor: not-allowed;
+}
+
+.number-item-seleccionado {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #2563eb;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Referencias */
+.referencias-container {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+.referencias-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.referencias-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.referencias-color {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  border: 2px solid;
+}
+
+.referencias-color.libre { 
+  background-color: white; 
+  border-color: #d1d5db; 
+}
+
+.referencias-color.reservado { 
+  background-color: #fbbf24; 
+  border-color: #f59e0b; 
+}
+
+.referencias-color.ocupado { 
+  background-color: #ef4444; 
+  border-color: #dc2626; 
+}
+
+.referencias-color.seleccionado { 
+  background-color: #3b82f6; 
+  border-color: #2563eb; 
+}
+
+/* Panel de compra */
+.purchase-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.purchase-summary {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.purchase-summary .title {
+  font-size: 1.125rem;
+  color: #1e40af;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.purchase-summary .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.purchase-summary .row .label { 
+  color: #6b7280; 
+}
+
+.purchase-summary .row .value { 
+  font-weight: 500; 
+}
+
+.purchase-summary .divider {
+  height: 1px;
+  background-color: #bfdbfe;
+  margin: 0.5rem 0;
+}
+
+.purchase-summary .total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+}
+
+.purchase-summary .total .amount { 
+  color: #2563eb; 
+}
+
+.purchase-button {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #16a34a;
+  color: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  min-width: 150px;
+  transition: background-color 0.2s ease;
+}
+
+.purchase-button:hover:not(:disabled) {
+  background-color: #15803d;
+}
+
+.purchase-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Números seleccionados */
+.selected-numbers {
+  margin-top: 1rem;
+}
+
+.selected-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.selected-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.selected-number {
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.instructions {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (min-width: 1024px) {
+  .purchase-panel {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  
+  .purchase-button {
+    width: auto;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .numbers-grid {
+    grid-template-columns: repeat(8, 1fr);
+    max-width: 480px;
+  }
+  
+  .number-item {
+    width: 45px;
+    height: 45px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .numbers-grid {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 300px;
+  }
+  
+  .number-item {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+}

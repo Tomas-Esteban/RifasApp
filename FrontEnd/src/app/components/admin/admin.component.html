@@ -1,0 +1,51 @@
+<div class="p-6 bg-white rounded-xl shadow-lg">
+  <h2 class="text-3xl font-semibold text-center text-blue-700 mb-6">Administración de Rifas</h2>
+
+  <div *ngIf="message" class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-6 rounded-md" role="alert">
+    <p class="font-bold">Información:</p>
+    <p>{{ message }}</p>
+  </div>
+
+  <div class="mb-6">
+    <label for="raffleSelect" class="block text-sm font-medium text-gray-700 mb-2">Seleccionar Rifa:</label>
+    <select id="raffleSelect" [(ngModel)]="selectedRaffleId" (change)="onRaffleSelected()"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+      <option value="" disabled>-- Selecciona una rifa --</option>
+      <option *ngFor="let raffle of raffles" [value]="raffle.id">{{ raffle.name }}</option>
+    </select>
+  </div>
+
+  <div *ngIf="selectedRaffleId">
+    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Configuración de Precios</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <div>
+        <label for="price1" class="block text-sm font-medium text-gray-700">Precio por 1 Rifa</label>
+        <input type="number" id="price1" [(ngModel)]="priceFor1" min="0" step="0.01"
+               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      <div>
+        <label for="price2" class="block text-sm font-medium text-gray-700">Precio por 2 Rifas</label>
+        <input type="number" id="price2" [(ngModel)]="priceFor2" min="0" step="0.01"
+               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+      </div>
+      <div>
+        <label for="price3" class="block text-sm font-medium text-gray-700">Precio por 3 Rifas</label>
+        <input type="number" id="price3" [(ngModel)]="priceFor3" min="0" step="0.01"
+               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+      </div>
+    </div>
+
+    <button (click)="savePrices()"
+            class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed">
+      Guardar Precios
+    </button>
+
+    <div *ngIf="currentPrices" class="mt-8 p-4 bg-gray-50 rounded-lg shadow-inner">
+      <h4 class="text-lg font-semibold text-gray-700 mb-2">Precios Actuales:</h4>
+      <p>1 Rifa: <span class="font-bold">${{ currentPrices.priceFor1 | number:'1.2-2' }}</span></p>
+      <p>2 Rifas: <span class="font-bold">${{ currentPrices.priceFor2 | number:'1.2-2' }}</span></p>
+      <p>3 Rifas: <span class="font-bold">${{ currentPrices.priceFor3 | number:'1.2-2' }}</span></p>
+    </div>
+  </div>
+</div>

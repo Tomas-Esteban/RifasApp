@@ -1,0 +1,87 @@
+<div class="raffle-container">
+  <div class="raffle-content">
+    <!-- Título -->
+    <h1 class="main-title">Rifa - Selecciona tus números</h1>
+    
+    <!-- Grilla de números -->
+    <div class="card">
+      <h2 class="section-title">Números disponibles</h2>
+      
+      <div class="numbers-grid">
+        <div *ngFor="let numberObj of numbers" 
+             [ngClass]="getNumberClass(numberObj)"
+             (click)="toggleNumberSelection(numberObj)">
+          {{ numberObj.number }}
+        </div>
+      </div>
+
+      <div class="referencias-container">
+        <h3 class="section-title">Referencias:</h3>
+        <div class="referencias-list">
+          <div class="referencias-item">
+            <div class="referencias-color libre"></div>
+            <span>Libre</span>
+          </div>
+          <div class="referencias-item">
+            <div class="referencias-color reservado"></div>
+            <span>Reservado</span>
+          </div>
+          <div class="referencias-item">
+            <div class="referencias-color ocupado"></div>
+            <span>Ocupado</span>
+          </div>
+          <div class="referencias-item">
+            <div class="referencias-color seleccionado"></div>
+            <span>Seleccionado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel de compra -->
+    <div class="card">
+      <div class="purchase-panel">
+        
+        <div class="purchase-summary">
+          <h3 class="title">Resumen de compra</h3>
+          
+          <div class="row">
+            <span class="label">Números seleccionados:</span>
+            <span class="value">{{ selectedNumbers.length }}</span>
+          </div>
+          
+          <div class="row">
+            <span class="label">Precio por número:</span>
+            <span class="value">${{ pricePerNumber.toLocaleString() }}</span>
+          </div>
+          
+          <div class="divider"></div>
+          
+          <div class="total">
+            <span>Total:</span>
+            <span class="amount">${{ totalPrice.toLocaleString() }}</span>
+          </div>
+
+          <div *ngIf="selectedNumbers.length > 0" class="selected-numbers">
+            <p class="selected-label">Números elegidos:</p>
+            <div class="selected-list">
+              <span *ngFor="let num of selectedNumbers" class="selected-number">
+                {{ num }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <button (click)="proceedToPurchase()"
+                [disabled]="selectedNumbers.length === 0"
+                class="purchase-button">
+          {{ selectedNumbers.length === 0 ? 'Selecciona números' : 'Comprar' }}
+        </button>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <p>Haz clic en los números blancos para seleccionarlos. Los números amarillos están reservados y los rojos ya están ocupados.</p>
+    </div>
+  </div>
+</div>
